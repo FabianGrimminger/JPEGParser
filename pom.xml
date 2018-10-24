@@ -14,8 +14,8 @@
   </dependencies>
   
   <properties>
-     <sonar.sources>/../../src/main/</sonar.sources>
-     <sonar.tests>/../../src/test/</sonar.tests>   
+     <sonar.sources>src/main/</sonar.sources>
+     <sonar.tests>src/test/</sonar.tests>   
   </properties>
   
   <build>
