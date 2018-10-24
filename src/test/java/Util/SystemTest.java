@@ -29,7 +29,7 @@ public class SystemTest {
 	public static List<Object> data(){
 		return Arrays.asList(new Object[] {
 				"8auf8BK.jpg","huff_simple0.jpg", "TestImage.jpg", "TestImage_new.jpg", "TestImage2.jpg", "TestImage3.jpg", "TestImage512_512.jpg", 
-				"TestImage640_360.jpeg", "TestImage640_360_new.jpg", "TestImage720_1280.jpg", "TestImage1920_1080.jpg", "TestImage1920_1080_2.jpg",
+				"TestImage640_360.jpeg", "TestImage640_360_new.jpg", "TestImage720_1280.jpg", /*"TestImage1920_1080.jpg",*/ "TestImage1920_1080_2.jpg",
 				"TestImage1920_1080_3.jpg", "TestImage1920_1080_4.jpg", "TestImage1920_1080_5.jpg", "TestImage2368_4208.jpeg", "TestImage3613_2078.JPG",
 				"TestImage4160_3120.jpg","TestImage6000_3376.jpeg", "whatsapp.jpg"
 				//"cat.jpg","cat_new.jpg", "mona.jpg", "mona_new.jpg","TestImage.jpg", 
