@@ -1,4 +1,4 @@
-package test.JPEG;
+package test.java.JPEG;
 
 import static org.junit.Assert.*;
 

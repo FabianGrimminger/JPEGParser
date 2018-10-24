@@ -1,4 +1,4 @@
-package test.steganography;
+package test.java.steganography;
 
 import static org.junit.Assert.*;
 

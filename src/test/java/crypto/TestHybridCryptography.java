@@ -1,4 +1,4 @@
-package test.crypto;
+package test.java.crypto;
 
 import org.junit.Test;
 

@@ -1,15 +1,15 @@
-package test.Util;
+package test.java.Util;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import test.JPEG.TestBitData;
-import test.JPEG.TestDCTMatrix;
-import test.JPEG.TestHuffmanDecode;
-import test.JPEG.TestHuffmanEncode;
-import test.JPEG.TestImageData;
-import test.steganography.TestChangeEmbeder;
+import test.java.JPEG.TestBitData;
+import test.java.JPEG.TestDCTMatrix;
+import test.java.JPEG.TestHuffmanDecode;
+import test.java.JPEG.TestHuffmanEncode;
+import test.java.JPEG.TestImageData;
+import test.java.steganography.TestChangeEmbeder;
 
 @RunWith(Suite.class)
 @SuiteClasses({ TestBitConverter.class, TestHuffmanDecode.class, TestDCTMatrix.class,
