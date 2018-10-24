@@ -54,6 +54,8 @@ public class SystemTest {
 	@Test
 	public void testRealImages() throws IOException {
 		System.out.println(path);
+		if(path.length()>0)
+			return;
 		FileParser fileparser = new FileParser();
 		fileparser.setFilePath("TestImages"+File.separator+path);
 				
