@@ -35,6 +35,7 @@ public class HuffmanEncode {
 			for (int i = 0; i < this.decodedData.get(listIndex).size(); i++)
 			{
 				try {
+					
 					String dc = encodeDCValue(i);
 					for (int j = 0; j < dc.length(); j++) {
 						if (dc.charAt(j) == '0') {
@@ -186,7 +187,7 @@ public class HuffmanEncode {
 	
 	private String getEncodedBitsDependingOnMatrixType(boolean DC, int i, int value)
 	{
-		String x = null;
+		String x = "";
 		if (((DCTMatrix) this.decodedData.get(listIndex).get(i)).getMatrixType() == Matrix.LUMINANCE)
 		{
 			if (DC)
@@ -222,6 +223,6 @@ public class HuffmanEncode {
 				return table[i][0];
 			}
 		}
-		return null;
+		return "";
 	}
 }
