@@ -15,8 +15,7 @@ public class FileIO {
 
 	public static byte[] readFile(File file) {
 
-		try {
-			FileInputStream fstream = new FileInputStream(file);
+		try(FileInputStream fstream = new FileInputStream(file)){
 			byte[] data = new byte[(int) file.length()];
 			int length = fstream.read(data);
 			if (length != file.length()) {
@@ -37,11 +36,10 @@ public class FileIO {
 	}
 
 	public static void writeFile(File file, byte[] data) {
-		try {
+		try(FileOutputStream fstream = new FileOutputStream(file)){
 			if (!file.exists()) {
 				file.createNewFile();
-			}
-			FileOutputStream fstream = new FileOutputStream(file);
+			}			
 			fstream.write(data);
 			fstream.flush();
 			fstream.close();

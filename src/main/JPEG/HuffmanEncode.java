@@ -34,15 +34,20 @@ public class HuffmanEncode {
 			List<Byte> bitData = new ArrayList<Byte>();
 			for (int i = 0; i < this.decodedData.get(listIndex).size(); i++)
 			{
-				String dc = encodeDCValue(i);
-				for(int j=0;j<dc.length();j++) {
-					if(dc.charAt(j)=='0') {
-						bitData.add((byte)0);
-					}else {
-						bitData.add((byte)1);
+				try {
+					String dc = encodeDCValue(i);
+					for (int j = 0; j < dc.length(); j++) {
+						if (dc.charAt(j) == '0') {
+							bitData.add((byte) 0);
+						} else {
+							bitData.add((byte) 1);
+						}
 					}
+				} catch (NullPointerException e) {
+					e.printStackTrace();
+					System.exit(0);
 				}
-				
+
 				String ac = encodeACValue(i);
 				for(int j=0;j<ac.length();j++) {
 					if(ac.charAt(j)=='0') {
@@ -148,12 +153,16 @@ public class HuffmanEncode {
 		String endOfBlock = getEncodedBitsDependingOnMatrixType(false, i, 0);
 		if (zrlrun > 0)
 		{
+			try {
 			String zrlBits = getEncodedBitsDependingOnMatrixType(false, i, 0xF0);
 			while (acString.endsWith(zrlBits))
 			{
 				acString = acString.substring(0, acString.length()-zrlBits.length());
 			}
 			acString += endOfBlock;
+			}catch(NullPointerException e) {
+				e.printStackTrace();
+			}
 		}
 		else
 		{

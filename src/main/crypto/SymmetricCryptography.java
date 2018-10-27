@@ -13,7 +13,11 @@ public class SymmetricCryptography {
 	private byte[] key;
 	
 	public SymmetricCryptography(){
+		try {
 		this.key = this.generateSymmetricKey().getEncoded();
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public SymmetricCryptography(SecretKey key) {

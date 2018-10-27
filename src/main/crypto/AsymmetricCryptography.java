@@ -17,9 +17,13 @@ public class AsymmetricCryptography {
 	private PrivateKey privateKey;
 	
 	public AsymmetricCryptography() {
+		try {
 		this.key = this.generateAsymmetricKey();
 		this.privateKey = key.getPrivate();
 		this.publicKey = key.getPublic();
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public AsymmetricCryptography(KeyPair key) {
